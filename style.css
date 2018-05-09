@@ -1,0 +1,116 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+table {
+  border-collapse: collapse;
+}
+table td, table th {
+  border: 1px solid grey;
+}
+table tr:first-child th {
+  border-top: 0;
+}
+table tr:first-child td{
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}
+table tr:last-child th{
+  border-bottom: 0;
+}
+.setup-box table{
+  font-size: 0.75em;
+}
+.setup-list input{
+  display: inline-block;
+}
+.header{
+  text-align: center;
+}
+#price{
+  font-size: 1em;
+}
+.price-box sup{
+  font-size: 1em;
+}
+.price-box h3{
+  font-size: 2em;
+  text-align: left;
+}
+.price-box{
+  right: 0;
+}
+.btn{
+  border-radius: 0px;
+}
+.t-shirt button, .sticker button{
+  font-size: 1.5em;
+}
+.form-control{
+  border-radius: 0px;
+  border: 2px solid black;
+}
+
+@media screen and (min-width: 789px){
+  .t-shirt p{
+    font-size: 1.5em;
+  }
+  .quantity-text p{
+    font-size: 1em;
+    padding-top: 15px;
+  }
+  .t-shirt button, .sticker button{
+    font-size: 1em;
+  }
+  .sticker p{
+    font-size: 1.5em;
+  }
+  .price-box{
+    vertical-align: bottom;
+  }
+  .price-box h3{
+    text-align: left;
+  }
+  .setup-box table{
+    font-size: 1em;
+  }
+  .setup-box label{
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .printing .dropdown{
+    display: none;
+  }
+  #size-dropdown{
+    display: none;
+  }
+  .printing table{
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1200px ){
+  .printing table td{
+    padding: 20px;
+  }
+  .t-shirt button, .sticker button{
+    font-size: 1.5em;
+  }
+}
+/*
+3. Sticker Calculator
