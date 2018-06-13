@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Potency Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <style>
+    .container {
+      text-align: center;
+    }
+    </style>
+
+<body>
+<div class="container">
+<br><br>
+<h2><u>Potency Calculator </u></h2>
+<br>
+<br>
+<h3>mg/g to %</h3>
+<label>Overall mg/g Cannabinoid in Product:</label>
+  <input id="inputMgPerGram" type="number" placeholder="mg/g" oninput="percentageConverter(this.value)" onchange="percentageConverter(this.value)"> mg/g
+</p>
+<p>Percentage Cannabinoid in Product: <span id="outputPercentage"></span> %</p>
+
+<!--
+<h3> Edibles </h3>
+<label>Total Weight of Product (g):</label>
+  <input id="inputWeight" type="number" placeholder=" g"> g
+</p>
+<label>Total Number of Servings (serv.):</label>
+  <input id="inputServings" type="number" placeholder=" servings"> g
+</p>
+<label>Total Cannabinoid/Product (mg):</label>
+  <input id="inputMg" type="number" placeholder="mg" oninput="rateConverter(inputMg.value, inputWeight.value, inputServings.value)" onchange="rateConverter(inputMg.value, inputWeight.value, inputServings.value)"> mg
+</p>
+<p>mg/g Cannabinoid in Per Serving: <span id="outputMgPerServ"></span> mg/g </p>
+-->
+
+<p>----</p>
+
+<h3>Tinctures</h3>
+  <label>Total Volume of Product (mL):</label>
+    <input id="inputVolume" type="number" placeholder="mL"> mL
+  </p>
+  <label>Total Cannabinoid/mL (mg/mL):</label>
+    <input id="inputMg1" type="number" placeholder="mg" oninput="multiply(inputMg1.value, inputVolume.value)" onchange="multiply(inputMg1.value, inputVolume.value)"> mg/mL
+  </p>
+  <p>mg/mL Cannabinoid in Product: <span id="outputMgPerMl"></span> mg/mL </p>
+
+</div>
+
+<script>
+function percentageConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputPercentage").innerHTML=(valNum/10);
+}
+
+
+function rateConverter(valNum1, valNum2, valNum3) {
+  valNum1 = parseFloat(valNum1);
+  valNum2 = parseFloat(valNum2);
+  valNum3 = parseFloat(valNum3);
+    document.getElementById("outputMgPerServ").innerHTML=(valNum1/valNum2/valNum3);
+}
+
+function rateConverter2(valNum1, valNum2) {
+  valNum1 = parseFloat(valNum1);
+  valNum2 = parseFloat(valNum2);
+    document.getElementById("outputMgPerMl").innerHTML=(valNum1/valNum2);
+}
+
+function multiply(valNum1, valNum2) {
+  valNum1 = parseFloat(valNum1);
+  valNum2 = parseFloat(valNum2);
+    document.getElementById("outputMgPerMl").innerHTML=(valNum1*valNum2);
+}
+
+</script>
+
+</body>
+</html>
