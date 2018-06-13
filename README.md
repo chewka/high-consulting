@@ -1,5 +1,5 @@
 # high-consulting
-Let's get high.
+Higher Standards.
 
 
 Website design for a Cannabis Industry Consulting Agency. 
